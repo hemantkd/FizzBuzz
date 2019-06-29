@@ -1,47 +1,28 @@
 using NUnit.Framework;
 
-namespace Tests
+namespace FizzBuzz.Tests
 {
     [TestFixture]
     public class FizzBuzzShould
     {
-        [Test]
-        public void Convert_1_to_1()
+        [TestCase(1,"1")]
+        [TestCase(2,"2")]
+        [TestCase(4,"4")]
+        [TestCase(7,"7")]
+        [TestCase(8,"8")]
+        [TestCase(11,"11")]
+        [TestCase(13,"13")]
+        [TestCase(14,"14")]
+        public void Convert_number_to_fizzbuzz_string(int number, string expectedOutput)
         {
             // Arrange
             var fizzbuzz = new FizzBuzz();
 
             // Act
-            var actualValue = fizzbuzz.Convert(1);
+            var actualValue = fizzbuzz.Convert(number);
 
             // Assert
-            Assert.That(actualValue, Is.EqualTo("1"));
-        }
-
-        [Test]
-        public void Convert_2_to_2()
-        {
-            // Arrange
-            var fizzbuzz = new FizzBuzz();
-
-            // Act
-            var actualValue = fizzbuzz.Convert(2);
-
-            // Assert
-            Assert.That(actualValue, Is.EqualTo("2"));
-        }
-
-        [Test]
-        public void Convert_4_to_4()
-        {
-            // Arrange
-            var fizzbuzz = new FizzBuzz();
-
-            // Act
-            var actualValue = fizzbuzz.Convert(4);
-
-            // Assert
-            Assert.That(actualValue, Is.EqualTo("4"));
+            Assert.That(actualValue, Is.EqualTo(expectedOutput));
         }
     }
 }
