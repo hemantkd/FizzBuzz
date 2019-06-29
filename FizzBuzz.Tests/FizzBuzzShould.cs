@@ -30,5 +30,18 @@ namespace Tests
             // Assert
             Assert.That(actualValue, Is.EqualTo("2"));
         }
+
+        [Test]
+        public void Convert_4_to_4()
+        {
+            // Arrange
+            var fizzbuzz = new FizzBuzz();
+
+            // Act
+            var actualValue = fizzbuzz.Convert(4);
+
+            // Assert
+            Assert.That(actualValue, Is.EqualTo("4"));
+        }
     }
 }
