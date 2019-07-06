@@ -7,19 +7,19 @@ namespace FizzBuzz.Tests
     {
         [TestCase(1,"1")]
         [TestCase(2,"2")]
-        [TestCase(3,"Fizz")]
+        [TestCase(3,FizzBuzzConstants.Fizz)]
         [TestCase(4,"4")]
-        [TestCase(5,"Buzz")]
-        [TestCase(6,"Fizz")]
+        [TestCase(5,FizzBuzzConstants.Buzz)]
+        [TestCase(6,FizzBuzzConstants.Fizz)]
         [TestCase(7,"7")]
         [TestCase(8,"8")]
-        [TestCase(9,"Fizz")]
-        [TestCase(10,"Buzz")]
+        [TestCase(9,FizzBuzzConstants.Fizz)]
+        [TestCase(10,FizzBuzzConstants.Buzz)]
         [TestCase(11,"11")]
-        [TestCase(12,"Fizz")]
+        [TestCase(12,FizzBuzzConstants.Fizz)]
         [TestCase(13,"13")]
         [TestCase(14,"14")]
-        [TestCase(15,"FizzBuzz")]
+        [TestCase(15,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
         public void Convert_number_to_fizzbuzz_string(int number, string expectedOutput)
         {
             // Arrange
