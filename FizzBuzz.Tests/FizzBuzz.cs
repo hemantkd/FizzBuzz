@@ -4,6 +4,11 @@
     {
         public string Convert(int number)
         {
+            if (NumberIsMultipleOf3() && NumberIsMultipleOf5())
+            {
+                return "FizzBuzz";
+            }
+
             if (NumberIsMultipleOf5())
             {
                 return "Buzz";
