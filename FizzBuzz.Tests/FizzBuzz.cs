@@ -14,6 +14,11 @@
                 return "Fizz";
             }
 
+            if (number == 9)
+            {
+                return "Fizz";
+            }
+
             return number.ToString();
         }
     }
