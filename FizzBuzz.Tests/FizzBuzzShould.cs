@@ -20,6 +20,10 @@ namespace FizzBuzz.Tests
         [TestCase(13,"13")]
         [TestCase(14,"14")]
         [TestCase(15,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
+        [TestCase(20,FizzBuzzConstants.Buzz)]
+        [TestCase(30,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
+        [TestCase(40,FizzBuzzConstants.Buzz)]
+        [TestCase(45,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
         public void Convert_number_to_fizzbuzz_string(int number, string expectedOutput)
         {
             // Arrange
