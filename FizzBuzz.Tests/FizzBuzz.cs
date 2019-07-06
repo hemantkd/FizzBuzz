@@ -9,6 +9,11 @@
                 return "Buzz";
             }
 
+            if (number == 10)
+            {
+                return "Buzz";
+            }
+
             if (NumberIsMultipleOf3())
             {
                 return "Fizz";
@@ -16,10 +21,7 @@
 
             return number.ToString();
 
-            bool NumberIsMultipleOf3()
-            {
-                return number % 3 == 0;
-            }
+            bool NumberIsMultipleOf3() => number % 3 == 0;
         }
     }
 }
