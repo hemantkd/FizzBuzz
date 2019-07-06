@@ -4,22 +4,17 @@
     {
         public string Convert(int number)
         {
-            if (number == 3)
-            {
-                return "Fizz";
-            }
-
-            if (number == 6)
-            {
-                return "Fizz";
-            }
-
-            if (number == 9)
+            if (NumberIsMultipleOf3())
             {
                 return "Fizz";
             }
 
             return number.ToString();
+
+            bool NumberIsMultipleOf3()
+            {
+                return number % 3 == 0;
+            }
         }
     }
 }
