@@ -14,6 +14,7 @@ namespace FizzBuzz.Tests
         [TestCase(8,"8")]
         [TestCase(9,"Fizz")]
         [TestCase(11,"11")]
+        [TestCase(12,"Fizz")]
         [TestCase(13,"13")]
         [TestCase(14,"14")]
         public void Convert_number_to_fizzbuzz_string(int number, string expectedOutput)
