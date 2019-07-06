@@ -2,21 +2,24 @@
 {
     public class FizzBuzz
     {
+        private const string Fizz = "Fizz";
+        private const string Buzz = "Buzz";
+
         public string Convert(int number)
         {
             if (NumberIsMultipleOf3() && NumberIsMultipleOf5())
             {
-                return "FizzBuzz";
+                return Fizz + Buzz;
             }
 
             if (NumberIsMultipleOf5())
             {
-                return "Buzz";
+                return Buzz;
             }
 
             if (NumberIsMultipleOf3())
             {
-                return "Fizz";
+                return Fizz;
             }
 
             return number.ToString();
