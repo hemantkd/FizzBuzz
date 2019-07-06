@@ -7,24 +7,13 @@ namespace FizzBuzz.Tests
     {
         [TestCase(1,"1")]
         [TestCase(2,"2")]
-        [TestCase(3,FizzBuzzConstants.Fizz)]
         [TestCase(4,"4")]
-        [TestCase(5,FizzBuzzConstants.Buzz)]
-        [TestCase(6,FizzBuzzConstants.Fizz)]
         [TestCase(7,"7")]
         [TestCase(8,"8")]
-        [TestCase(9,FizzBuzzConstants.Fizz)]
-        [TestCase(10,FizzBuzzConstants.Buzz)]
         [TestCase(11,"11")]
-        [TestCase(12,FizzBuzzConstants.Fizz)]
         [TestCase(13,"13")]
         [TestCase(14,"14")]
-        [TestCase(15,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
-        [TestCase(20,FizzBuzzConstants.Buzz)]
-        [TestCase(30,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
-        [TestCase(40,FizzBuzzConstants.Buzz)]
-        [TestCase(45,FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz)]
-        public void Convert_number_to_fizzbuzz_string(int number, string expectedOutput)
+        public void Convert_regular_number_to_number_string(int number, string expectedOutput)
         {
             // Arrange
             var fizzbuzz = new FizzBuzz();
@@ -34,6 +23,53 @@ namespace FizzBuzz.Tests
 
             // Assert
             Assert.That(actualValue, Is.EqualTo(expectedOutput));
+        }
+
+        [TestCase(3)]
+        [TestCase(6)]
+        [TestCase(9)]
+        [TestCase(12)]
+        public void Convert_multiples_of_3_to_Fizz(int number)
+        {
+            // Arrange
+            var fizzbuzz = new FizzBuzz();
+
+            // Act
+            var actualValue = fizzbuzz.Convert(number);
+
+            // Assert
+            Assert.That(actualValue, Is.EqualTo(FizzBuzzConstants.Fizz));
+        }
+
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(20)]
+        [TestCase(40)]
+        public void Convert_multiples_of_5_to_Buzz(int number)
+        {
+            // Arrange
+            var fizzbuzz = new FizzBuzz();
+
+            // Act
+            var actualValue = fizzbuzz.Convert(number);
+
+            // Assert
+            Assert.That(actualValue, Is.EqualTo(FizzBuzzConstants.Buzz));
+        }
+
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(45)]
+        public void Convert_multiples_of_3_and_5_to_Buzz(int number)
+        {
+            // Arrange
+            var fizzbuzz = new FizzBuzz();
+
+            // Act
+            var actualValue = fizzbuzz.Convert(number);
+
+            // Assert
+            Assert.That(actualValue, Is.EqualTo(FizzBuzzConstants.Fizz+FizzBuzzConstants.Buzz));
         }
     }
 }
