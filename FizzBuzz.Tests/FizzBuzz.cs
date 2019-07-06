@@ -4,12 +4,7 @@
     {
         public string Convert(int number)
         {
-            if (number == 5)
-            {
-                return "Buzz";
-            }
-
-            if (number == 10)
+            if (NumberIsMultipleOf5())
             {
                 return "Buzz";
             }
@@ -22,6 +17,8 @@
             return number.ToString();
 
             bool NumberIsMultipleOf3() => number % 3 == 0;
+
+            bool NumberIsMultipleOf5() => number % 5 == 0;
         }
     }
 }
